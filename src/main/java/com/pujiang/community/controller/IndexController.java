@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 
-public class HelloController {
+public class IndexController {
     @GetMapping("/hello")
     public String hello(@RequestParam(name = "name") String name, Model model) {
 //    把值放入model 中
