@@ -1,2 +1,24 @@
 localhost/127.0.0.1/path
 访问本地的网站
+
+
+
+bootstrap   https://v3.bootcss.com/css/
+
+github登录
+    1 到git获取gitapp    （api）
+    git add.
+    git status  查看当前状态
+    git commit -m "sda"    提交 附带信息
+
+OkHttp     post 执行post请求
+
+session 和cookie   一种状态证明   类似银行卡
+session 服务器  cookie 客户端
+UML  统一建模语言
+
+泛化关系    eg     mac  是电脑      继承非抽象类
+实现关系   电脑是一台     可计算处理气     继承抽象类
+聚合关系    码农和部门关系        不是强依赖关系
+组合关系  强依赖   部门与公司的关系
+关联关系
