@@ -58,19 +58,49 @@
             <version>1.4.199</version>
         </dependency>
 
-        <!-- mysql连接包 -->
+        <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <optional>true</optional>
+        </dependency>
+<!--         mysql连接包-->
 <!--        <dependency>-->
 <!--            <groupId>mysql</groupId>-->
 <!--            <artifactId>mysql-connector-java</artifactId>-->
 <!--            <version>5.1.30</version>-->
 <!--        </dependency>-->
-<!--    </dependencies>-->
+    </dependencies>
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>6.3.3</version>
+<!--                flyway migration-->
+                <configuration>
+                    <url>jdbc:h2:~/community</url>
+                    <user>sa</user>
+                    <password>123</password>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.h2database</groupId>
+                        <artifactId>h2</artifactId>
+                        <version>1.4.199</version>
+                    </dependency>
+
+<!--&lt;!&ndash;                    自动部署&ndash;&gt;-->
+<!--                    <dependency>-->
+<!--                        <groupId>org.springframework.boot</groupId>-->
+<!--                        <artifactId>spring-boot-devtools</artifactId>-->
+<!--                        <optional>true</optional>-->
+<!--                    </dependency>-->
+                </dependencies>
             </plugin>
         </plugins>
     </build>
